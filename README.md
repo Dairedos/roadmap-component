@@ -99,4 +99,4 @@ const roadmapData = [
 
 ## License
 
-This project is part of the Flopcoin ecosystem.
+This project is part of the Flopcoin ecosystem. Made by Daired (BlockIO) - if you want to support this initiative fill any of faucets on https://blockio.xyz :)
