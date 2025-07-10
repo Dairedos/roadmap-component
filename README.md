@@ -1,5 +1,4 @@
 # Flopcoin Roadmap Component
-# Made with in 2025 with AI in fraction of actual time that it would take me without it - Daired
 
 A standalone React component displaying the Flopcoin project roadmap with interactive timeline and detailed modal views.
 
@@ -100,4 +99,4 @@ const roadmapData = [
 
 ## License
 
-This project is part of the Flopcoin ecosystem.
+This project is part of the Flopcoin ecosystem. Made by Daired (BlockIO)
