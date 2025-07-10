@@ -42,8 +42,14 @@ const RoadmapPage = () => {
       type: "completed",
       description: "• Bitcointalk Forum Post\n• Official Website Launch: flopcoin.net",
       detailedDescription: {
-        "Bitcointalk Forum Post": "Published a comprehensive announcement thread on Bitcointalk, the premier cryptocurrency forum, detailing Flopcoin's technical specifications, mining parameters, and community goals. This post served as the official introduction to the Bitcoin community.",
-        "Official Website Launch": "Deployed flopcoin.net as the central hub for all Flopcoin information, featuring mining guides, community links, project documentation, and real-time network statistics. The website serves as the primary resource for both newcomers and experienced users."
+        "Bitcointalk Forum Post": {
+          text: "Published a comprehensive announcement thread on Bitcointalk, the premier cryptocurrency forum, detailing Flopcoin's technical specifications, mining parameters, and community goals. This post served as the official introduction to the Bitcoin community.",
+          link: "https://bitcointalk.org/"
+        },
+        "Official Website Launch": {
+          text: "Deployed flopcoin.net as the central hub for all Flopcoin information, featuring mining guides, community links, project documentation, and real-time network statistics. The website serves as the primary resource for both newcomers and experienced users.",
+          link: "https://flopcoin.net/"
+        }
       },
       position: "bottom",
       // image: {
@@ -58,8 +64,14 @@ const RoadmapPage = () => {
       type: "completed",
       description: "• FLOP added to Komodo Wallet (Mobile/Web)\n• Exchange Listings: Exbitron & Bitcointry\n• Discord Staking Feature Released",
       detailedDescription: {
-        "Komodo Wallet Integration": "Integrated Flopcoin into Komodo Wallet's mobile and web platforms, providing users with secure, user-friendly wallet options for storing and managing their FLOP tokens. This integration significantly improved accessibility for non-technical users.",
-        "Exchange Listings": "Successfully listed on Exbitron and Bitcointry exchanges, providing the first opportunities for users to trade FLOP tokens. These listings established initial price discovery and liquidity for the Flopcoin ecosystem.",
+        "Komodo Wallet Integration": {
+          text: "Integrated Flopcoin into Komodo Wallet's mobile and web platforms, providing users with secure, user-friendly wallet options for storing and managing their FLOP tokens. This integration significantly improved accessibility for non-technical users.",
+          link: "https://komodoplatform.com/en/"
+        },
+        "Exchange Listings": {
+          text: "Successfully listed on Exbitron and Bitcointry exchanges, providing the first opportunities for users to trade FLOP tokens. These listings established initial price discovery and liquidity for the Flopcoin ecosystem.",
+          link: "https://exbitron.com/"
+        },
         "Discord Staking Feature": "Launched an innovative Discord-based staking mechanism allowing community members to earn rewards by participating in server activities and holding FLOP tokens, gamifying community engagement."
       },
       position: "top",
@@ -339,7 +351,23 @@ const RoadmapPage = () => {
                     {Object.entries(selectedItem.detailedDescription).map(([key, value], index) => (
                       <div key={index} className="modal-detail-row">
                         <h4 className="modal-detail-title">{key}</h4>
-                        <p className="modal-detail-text">{value}</p>
+                        {typeof value === 'object' && value.text ? (
+                          <div className="modal-detail-text">
+                            <p>{value.text}</p>
+                            {value.link && (
+                              <a 
+                                href={value.link} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="modal-detail-link"
+                              >
+                                Visit {key} →
+                              </a>
+                            )}
+                          </div>
+                        ) : (
+                          <p className="modal-detail-text">{value}</p>
+                        )}
                       </div>
                     ))}
                   </div>
