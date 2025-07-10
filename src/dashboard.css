@@ -646,6 +646,36 @@
   }
 }
 
+/* Palm tree shadow styles */
+.palm-tree-shadow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.palm-tree-image {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+  transform: rotate(-5deg);
+  transition: opacity 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .palm-tree-image {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .palm-tree-image {
+    width: 400px;
+  }
+}
+
 /* Roadmap-specific responsive adjustments */
 @media (max-width: 768px) {
   .bubble-container {
