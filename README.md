@@ -1,5 +1,5 @@
 # Flopcoin Roadmap Component
-# Made with in 2025 with AI in fraction of actual time that it would take me without it. Average devs are doomed - Daired
+# Made with in 2025 with AI in fraction of actual time that it would take me without it - Daired
 
 A standalone React component displaying the Flopcoin project roadmap with interactive timeline and detailed modal views.
 
