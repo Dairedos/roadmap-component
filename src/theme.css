@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
+/* Main container styles */
+.theme-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #581c87 0%, #be185d 50%, #ea580c 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Animated background elements */
+.bg-orb-1 {
+  position: absolute;
+  top: 5rem;
+  left: 2.5rem;
+  width: 8rem;
+  height: 8rem;
+  background: #22d3ee;
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: pulse 2s infinite;
+  opacity: 0.2;
+}
+
+.bg-orb-2 {
+  position: absolute;
+  top: 10rem;
+  right: 5rem;
+  width: 6rem;
+  height: 6rem;
+  background: #ec4899;
+  border-radius: 50%;
+  filter: blur(28px);
+  animation: bounce 2s infinite;
+  opacity: 0.2;
+}
+
+.bg-orb-3 {
+  position: absolute;
+  bottom: 5rem;
+  left: 25%;
+  width: 10rem;
+  height: 10rem;
+  background: #a855f7;
+  border-radius: 50%;
+  filter: blur(56px);
+  animation: pulse 3s infinite;
+  opacity: 0.2;
+}
+
+.bg-orb-4 {
+  position: absolute;
+  bottom: 10rem;
+  right: 15%;
+  width: 7rem;
+  height: 7rem;
+  background: #fb923c;
+  border-radius: 50%;
+  filter: blur(32px);
+  animation: bounce 4s infinite;
+  opacity: 0.2;
+}
+
+/* Grid pattern overlay */
+.grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(34, 211, 238, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  animation: gridMove 20s linear infinite;
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Utility classes */
+.w-6 {
+  width: 1.5rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
