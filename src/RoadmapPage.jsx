@@ -5,7 +5,6 @@ import './theme.css';
 import synthwaveHeader from './images/roadmap/demo_image_roadmap.png';
 import demoImage from './images/roadmap/demo_image.png';
 import flopcoinImage from './images/roadmap/flopcoin.png';
-import palmTreeImage from './images/roadmap/palm-tree.png';
 
 const RoadmapPage = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -180,16 +179,6 @@ const RoadmapPage = () => {
 
       {/* Grid pattern overlay */}
       <div className="grid-pattern"></div>
-
-      {/* Palm tree shadow in top right */}
-      <div className="palm-tree-shadow">
-        <img 
-          src={palmTreeImage} 
-          alt="Palm tree shadow"
-          className="palm-tree-image"
-        />
-      </div>
-
       {/* Main content */}
       <div style={{ position: 'relative', zIndex: 10 }} className="container mx-auto px-4 py-8">
         {/* Header */}
